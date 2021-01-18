@@ -1,0 +1,13 @@
+This is a log of all Changes done
+
+1.0: set up mongo database
+1.1: Create express backend
+1.10: created .gitignore
+1.11: initialized app with npm init
+1.12: install dependencies (npm i express express-validator bcryptjs config jsonwebtoken mongoose request)
+1.13: install dev dependencies (npm i -D nodemon concurrently)
+1.14: create entry file (server.js)
+1.15: create scripts for running servers (package.json)
+1.16: tested if server runs on npm run server command and tested get request for localhost:5000 on postman (both are good)
+
+
