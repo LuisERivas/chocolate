@@ -10,4 +10,11 @@ This is a log of all Changes done
 1.15: create scripts for running servers (package.json)
 1.16: tested if server runs on npm run server command and tested get request for localhost:5000 on postman (both are good)
 
-
+2.00: create config folder
+2.01: create default.json in config folder
+2.02: create db.js in config folder
+2.03: added connectDB function to server.js that is being pulled from config/db.js
+2.04: tested if the server connects the mongo db with npm run server (confirmed connection but need to fix deprecations)
+2.05: added deprication fix on db.js (useNewUrlParser: true) *still getting other deprication warning*
+2.06: added deprication fix on db.js (useUnifiedTopology: true) *No more deprication warnings*
+2.07: branch pushed for merging 
