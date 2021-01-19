@@ -24,6 +24,17 @@ This is a log of all Changes done
 3.02: inside of api folder create users.js, auth.js
 3.03: create get route in user.js to test if route works
 3.04: create get route in auth to test if the route works
-3.05: 
-3.06: 
-3.07: 
+3.05: add routes to server.js
+3.06: test localhost:5000/api/users and /auth on postman to see if it checks out (Good to go)
+
+4.00: create new folder in root called models
+4.01: create new file in models folder called Users.js
+
+5.00: create new folder in root called models
+5.01: create new file in models folder called Users.js
+5.02: 
+5.03: 
+5.04: 
+5.05: 
+5.06:
+5.07: 
