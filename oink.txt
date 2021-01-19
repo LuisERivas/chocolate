@@ -18,3 +18,12 @@ This is a log of all Changes done
 2.05: added deprication fix on db.js (useNewUrlParser: true) *still getting other deprication warning*
 2.06: added deprication fix on db.js (useUnifiedTopology: true) *No more deprication warnings*
 2.07: branch pushed for merging 
+
+3.00: Create folder in root called routes
+3.01: inside routes folder create folder called API
+3.02: inside of api folder create users.js, auth.js
+3.03: create get route in user.js to test if route works
+3.04: create get route in auth to test if the route works
+3.05: 
+3.06: 
+3.07: 
