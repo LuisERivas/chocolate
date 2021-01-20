@@ -35,6 +35,13 @@ This is a log of all Changes done
 5.02: test post request in postman (Good to go)
 5.03: add validator to routes/api/user.js
 5.04: test validator to see if its working (Good to go)
-5.05: 
-5.06:
-5.07: 
+
+
+6.00: added user registration checks to user.js, called req.body information, bring in user model
+6.01: added console log for error, added user exist check and response if doesnt pass
+6.02: recieved depreciation error, fixed by adding useCreateIndex to config/db.js
+6.04: added new object user creation to routes/api/user.js, brought in bcrypt to encrypt password
+6.05: added salt to hash password, hashsed password, and saved user object, added temp response to confirm registration 
+6.06: test on postman to see if user has registered (Good to go on postman and checked if data is on server)
+6.07: recieved depreciation warning on attemtping to register some one whos email already exists, fixed by adding return to response that user already exists on routes/api/user.js (Good to go)
+6.08: 
