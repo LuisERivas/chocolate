@@ -45,3 +45,21 @@ This is a log of all Changes done
 6.06: test on postman to see if user has registered (Good to go on postman and checked if data is on server)
 6.07: recieved depreciation warning on attemtping to register some one whos email already exists, fixed by adding return to response that user already exists on routes/api/user.js (Good to go)
 6.08: 
+
+7.00: bring in jwt to routes/api/user.js, create payload to use with jwt, added jwt sign
+7.01: added secret for jwt to config/default.json, bring in secret to routes/api/users.js
+7.02: added jwt configureation and error handling
+7.04: testing jwt showing token, failed, not sure why. (good to go) fixed by getting rid of console log that superceeded the token posting
+7.05: 
+7.06: 
+7.07: 
+7.08: 
+
+8.00: 
+8.01: 
+8.02: 
+8.04: 
+8.05: 
+8.06: 
+8.07: 
+8.08: 
