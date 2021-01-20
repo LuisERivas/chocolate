@@ -1,19 +1,18 @@
 
 // brining in express
 const express = require('express')
-
 // bring in router
 const router = express.Router()
-
 // bring in validator
 const { check, validationResult } = require('express-validator')
-
 // bring in user model
 const User = require('../../models/Users')
-
 // Bring in Bcrypt
 const bcrypt = require('bcryptjs')
-
+// Bring in JWT
+const jwt = require('jsonwebtoken')
+// Bring in secret
+const config = require('config')
 // @Route:         Get api/users
 // @Description:   Test route
 // @access:        Public
@@ -75,11 +74,32 @@ router.post('/',
       user.password = await bcrypt.hash(password, salt)
       // save user use await since it leaves a promise
       await user.save()
-      // return jsonwebtoken
-      res.send('User Registered')
 
-      // res.send('User Route')
-      // if unable to do check
+      // return jsonwebtoken
+      // create payload to use with jwt
+      const payload = {
+        // look at saved user
+        user: {
+          // pull out promised user.id
+          id: user.id
+        }
+      }
+      // jwt sign
+      // sign with payload and with jwttoken pulled from default.json
+      jwt.sign(
+        payload,
+        // configures the jwt token
+        config.get('jwtSecret'),
+        // expires in an hour
+        { expiresIn: 3600 },
+        // if an error
+        (err, token) => {
+          // throw the error
+          if (err) throw err
+          // response with the token
+          res.send({ token })
+        }
+      )
     } catch (err) {
       // console the error message
       console.error(err.message)
