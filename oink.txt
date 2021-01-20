@@ -30,11 +30,11 @@ This is a log of all Changes done
 4.00: create new folder in root called models
 4.01: create new file in models folder called Users.js
 
-5.00: create new folder in root called models
-5.01: create new file in models folder called Users.js
-5.02: 
-5.03: 
-5.04: 
+5.00: added post request to api/user.js
+5.01: initialize bodyparser middleware in server.js
+5.02: test post request in postman (Good to go)
+5.03: add validator to routes/api/user.js
+5.04: test validator to see if its working (Good to go)
 5.05: 
 5.06:
 5.07: 
