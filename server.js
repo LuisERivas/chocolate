@@ -10,6 +10,9 @@ const app = express()
 // Connect Database
 connectDB()
 
+// initialize middleware
+app.use(express.json({ extended: false }))
+
 /* Default to port 5000 */
 const PORT = process.env.PORT || 5000
 
