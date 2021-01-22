@@ -65,17 +65,22 @@ This is a log of all Changes done
 9.01: test post request to api/auth with content-type header with value of application/json and raw body with email and password.
 9.02: should get token back (good to go) Check to see if you get correct response with bad email and bad password (Good to go)
 9.04: CHeck to see if given token works (GOod to go)
-9.05: 
-9.06: 
-9.07: 
-9.08:
 
 
-10.00: 
-10.01: 
-10.02: 
-10.04: 
-10.05: 
-10.06: 
-10.07: 
+10.00: in git run npx create-react-app client
+10.01: add scripts to root package.json for concurrently running client server and data base server
+10.02: test if script works npm run dev (good to go)
+10.04: install dependencdies into client with , npm i axios react-router-dom redux react-redux redux-thunk redux-devtools-extension moment react-moment
+10.05: deleted readme and gitignore in client that was created when the app was created and ran rm -rf .git in client folder to get rid of any git stuff
+10.06: addex proxy to client/package.json
+10.07: tested npm run dev in root (Good to go)
 10.08:
+
+11.00: 
+11.01: 
+11.02: 
+11.04: 
+11.05: 
+11.06: 
+11.07: 
+11.08:
