@@ -59,14 +59,23 @@ This is a log of all Changes done
 8.05: test on postman with token. (good to go) * make sure to test by using header and x-auth-token
 8.06: bring in user model to api/auth.js, add async to get function, add try catch to pull the user infomration by id or cause failure message
 8.07: test if modified get request will pull id by using token and x-auth-token (good to go)
-8.08: 
 
 
-9.00: 
-9.01: 
-9.02: 
-9.04: 
+9.00: created post api/auth to authenticate user and get token, brought in express validator, bcrypt, jwt, and config, 
+9.01: test post request to api/auth with content-type header with value of application/json and raw body with email and password.
+9.02: should get token back (good to go) Check to see if you get correct response with bad email and bad password (Good to go)
+9.04: CHeck to see if given token works (GOod to go)
 9.05: 
 9.06: 
 9.07: 
 9.08:
+
+
+10.00: 
+10.01: 
+10.02: 
+10.04: 
+10.05: 
+10.06: 
+10.07: 
+10.08:
