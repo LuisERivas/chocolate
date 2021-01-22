@@ -50,16 +50,23 @@ This is a log of all Changes done
 7.01: added secret for jwt to config/default.json, bring in secret to routes/api/users.js
 7.02: added jwt configureation and error handling
 7.04: testing jwt showing token, failed, not sure why. (good to go) fixed by getting rid of console log that superceeded the token posting
-7.05: 
-7.06: 
-7.07: 
-7.08: 
+7.05: tested token in jwt to make sure it works (good to go)
 
-8.00: 
-8.01: 
-8.02: 
-8.04: 
-8.05: 
-8.06: 
-8.07: 
+8.00: create folder in root called middleware, in middleware folder create auth.js
+8.01: bring in dependencies of jwt and confit, then create module export, created check for if token is present
+8.02: created check to see if token is valid if it is present
+8.04: bring in middleware to api/auth.js, add auth to get request, test on postman to see if auth middleware works, tried without token and access was denied, (Good to go)
+8.05: test on postman with token. (good to go) * make sure to test by using header and x-auth-token
+8.06: bring in user model to api/auth.js, add async to get function, add try catch to pull the user infomration by id or cause failure message
+8.07: test if modified get request will pull id by using token and x-auth-token (good to go)
 8.08: 
+
+
+9.00: 
+9.01: 
+9.02: 
+9.04: 
+9.05: 
+9.06: 
+9.07: 
+9.08:

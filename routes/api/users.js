@@ -98,6 +98,7 @@ router.post('/',
           if (err) throw err
           // response with the token
           res.send({ token })
+          //console.log(token)
         }
       )
     } catch (err) {
