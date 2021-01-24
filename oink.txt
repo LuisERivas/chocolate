@@ -84,11 +84,18 @@ This is a log of all Changes done
 11.07: tried adding bootstrap react to client dependencies in app.js, and tested mavbar and landing components in app.js
 11.08: Testing (good to go)
 
-12.00: 
-12.01: 
-12.02: 
-12.04: 
-12.05: 
-12.06: 
-12.07: 
-12.08:
+12.00: bring in browser router to app.js, user router to create path for landing page to shop up on '/'
+12.01: created auth folder in components/layout with Login.js and Register.js files
+12.02: test by importing register and login compoents in app.js. good to go on path localhost:3000/login and also good to go on localhost:3000/register
+12.04: added container classname to section in app.js to format component in the center and tested to see if buttons will link to the right pages (good to go)
+12.05: cleaned up links to register, login pages cleand up NaviBar
+12.06: Links tested register, login, and home brand link all Good To Go 
+
+13.00: 
+13.01: 
+13.02: 
+13.04: 
+13.05: 
+13.06: 
+13.07: 
+13.08:
