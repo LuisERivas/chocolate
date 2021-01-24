@@ -74,13 +74,21 @@ This is a log of all Changes done
 10.05: deleted readme and gitignore in client that was created when the app was created and ran rm -rf .git in client folder to get rid of any git stuff
 10.06: addex proxy to client/package.json
 10.07: tested npm run dev in root (Good to go)
-10.08:
 
-11.00: 
-11.01: 
-11.02: 
-11.04: 
-11.05: 
-11.06: 
-11.07: 
-11.08:
+11.00: Cleaned up client app by deleting src/app.test.js, index.css, and logo.svg, and reportwebvitals
+11.01: go to index.js and remove reportwebvitals and index.css
+11.02: removed logo from app.js and convert app function to an arrow function
+11.04: test to make sure app still runs with changes made (Good to go)
+11.05: Clear out app.css file, eddited title of public/index.html
+11.06: created components folder in src folder and layout folder in components, then create Navbar.js and Landing.js
+11.07: tried adding bootstrap react to client dependencies in app.js, and tested mavbar and landing components in app.js
+11.08: Testing (good to go)
+
+12.00: 
+12.01: 
+12.02: 
+12.04: 
+12.05: 
+12.06: 
+12.07: 
+12.08:
