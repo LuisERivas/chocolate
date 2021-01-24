@@ -1,16 +1,22 @@
 import React from 'react'
 
 // import bootstrap components
-import { Container, Row, Col } from 'react-bootstrap'
-
+import { Container, Row, Col, Button } from 'react-bootstrap'
 
 const Landing = () => {
   return (
     <Container>
       <Row>
-        <Col> Shala</Col>
-        <Col> Wala </Col>
-        <Col> Bing </Col>
+        Choose One to do
+      </Row>
+      <Row>
+        <Col />
+        <Col>
+          <Button href='/register' variant='secondary'> Register </Button>
+          <Button href='/login' variant='success'> Login </Button>
+        </Col>
+        
+        <Col />
       </Row>
     </Container>
   )
