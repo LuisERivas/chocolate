@@ -91,11 +91,20 @@ This is a log of all Changes done
 12.05: cleaned up links to register, login pages cleand up NaviBar
 12.06: Links tested register, login, and home brand link all Good To Go 
 
-13.00: 
-13.01: 
-13.02: 
-13.04: 
-13.05: 
+13.00: bring in fragment to Register.js
+13.01: created basic sign up form for register page
+13.02: bring in useState hook, create default state values, added value and on change function to individual form inputs
+13.04: added onsubmit to form tag 
+13.05: created onSubmit function, test to see if message pops up when pass do not match. Did not work at first, fixed by changing e.preventdefault to e.preventDefault
 13.06: 
 13.07: 
 13.08:
+
+14.00: 
+14.01: 
+14.02: 
+14.04: 
+14.05: 
+14.06: 
+14.07: 
+14.08:
