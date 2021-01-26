@@ -101,11 +101,20 @@ This is a log of all Changes done
 14.01: CHeck to see that links to register and login work properly and that login button saves data to console
 14.02: Good to go
 
-15.00: 
-15.01: 
-15.02: 
-15.04: 
-15.05: 
-15.06: 
+15.00: in client/src, create store.js
+15.01: bring in createStore, applyMiddleware and composeWithDevTools, thunk and rootreducer
+15.02: create reducers folder inside of src, and create file called index.js
+15.04: set initial state, bring in middlweare from thunk, create state store, setup export
+15.05: bring in store to src/App.js and brin gin provider from react-redux, then wrap everything in the provider 
+15.06: bring in combineReducers to src/reducers/index.js
 15.07: 
 15.08:
+
+16.00: 
+16.01: 
+16.02: 
+16.04: 
+16.05: 
+16.06: 
+16.07: 
+16.08:
