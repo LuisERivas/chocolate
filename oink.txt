@@ -96,15 +96,16 @@ This is a log of all Changes done
 13.02: bring in useState hook, create default state values, added value and on change function to individual form inputs
 13.04: added onsubmit to form tag 
 13.05: created onSubmit function, test to see if message pops up when pass do not match. Did not work at first, fixed by changing e.preventdefault to e.preventDefault
-13.06: 
-13.07: 
-13.08:
 
-14.00: 
-14.01: 
-14.02: 
-14.04: 
-14.05: 
-14.06: 
-14.07: 
-14.08:
+14.00: set up login.js with state set up, destructring data, set up on change function, set up on submit function
+14.01: CHeck to see that links to register and login work properly and that login button saves data to console
+14.02: Good to go
+
+15.00: 
+15.01: 
+15.02: 
+15.04: 
+15.05: 
+15.06: 
+15.07: 
+15.08:

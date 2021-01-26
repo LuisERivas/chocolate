@@ -78,7 +78,7 @@ const Register = () => {
         </div>
         <p>
             Already have an account?
-          <a href='login' > Sign in </a>
+          <a href='/login' > Login </a>
         </p>
       </form>
     </Fragment>
