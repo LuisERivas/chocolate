@@ -12,18 +12,24 @@ import Navibar from './components/layout/Navibar'
 import Landing from './components/layout/Landing'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
+// Bring in redux
+import { Provider } from 'react-redux'
+import store from './store'
 
 const App = () =>
-  <Router>
-    <Fragment>
-      <Navibar />
-      <Route exact path='/' component={Landing} />
-      <section className='container'>
-        <Switch>
-          <Route exact path='/register' component={Register} />
-          <Route exact path='/login' component={Login} />
-        </Switch>
-      </section>
-    </Fragment>
-  </Router>
+// provider uses store
+  <Provider store={store}>
+    <Router>
+      <Fragment>
+        <Navibar />
+        <Route exact path='/' component={Landing} />
+        <section className='container'>
+          <Switch>
+            <Route exact path='/register' component={Register} />
+            <Route exact path='/login' component={Login} />
+          </Switch>
+        </section>
+      </Fragment>
+    </Router>
+  </Provider>
 export default App
