@@ -106,9 +106,16 @@ This is a log of all Changes done
 15.02: create reducers folder inside of src, and create file called index.js
 15.04: set initial state, bring in middlweare from thunk, create state store, setup export
 15.05: bring in store to src/App.js and brin gin provider from react-redux, then wrap everything in the provider 
-15.06: bring in combineReducers to src/reducers/index.js
-15.07: 
-15.08:
+15.06: bring in combineReducers to src/reducers/index.js and add export, confirm that devtools come up on inspect in app (good to go)
+
+16.00: create alert.js in reducers folder and bring in alert to reducers/index.js
+16.01: in alert.js set initial state, create export function, set up switch to evaluate actions
+16.02: in src create actions folder, and in actions folder, create types.js
+16.04: set up types.js by sertting up export for alert types of set alert and remove alert
+16.05: bring alert types into alert reducer and set up alerts in switch
+16.06: create alert.js in src/actions, bring in set alert and remove alert
+16.07: add uuid dependency to client with npm i uuid
+16.08:
 
 16.00: 
 16.01: 
