@@ -114,14 +114,25 @@ This is a log of all Changes done
 16.04: set up types.js by sertting up export for alert types of set alert and remove alert
 16.05: bring alert types into alert reducer and set up alerts in switch
 16.06: create alert.js in src/actions, bring in set alert and remove alert
-16.07: add uuid dependency to client with npm i uuid
+16.07: add uuid dependency to client with npm i uuid, add uuid import, sert up export of set alert with dispatch of information given
 16.08:
 
-16.00: 
-16.01: 
-16.02: 
-16.04: 
-16.05: 
-16.06: 
-16.07: 
-16.08:
+17.00: bring in connect from react-redux to src/components/auth/Register.js, add connect to the export
+17.01: had errors with uuid usage in actions/alert.js (fixed by chaing import line based on docummentation)
+17.02: test to see if registering with unmatching passwords leads to seting of state to the message, type, and an id (Good to go)
+17.04: Destructure props in register.js
+17.05: in components/layout, create Alert.js, bring in connect, connect state to props
+17.06: bring in proptypes to register.js and add proptype registration
+17.07: embed alert.js into client/app.js by bringing in app.js, add mapstate to props to connect in alert js
+17.08: test that alert pops up when bad password (Good to go)
+17.09: in actions/alert.js create the time out for the alert. check to make sure the alert dissapears after 5 seconds. (Good to go)
+17.09: change setAlert to take in msg, alertType and also timeout length and replaced fixed time period for time out in settimeout dispatch to the new timeout variable, Tested to see if new variable works (Good to Go)
+
+17.00: 
+17.01: 
+17.02: 
+17.04: 
+17.05: 
+17.06: 
+17.07: 
+17.08:

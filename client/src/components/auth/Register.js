@@ -1,6 +1,12 @@
 import React, { Fragment, useState } from 'react'
+// bring in connect
+import { connect } from 'react-redux'
+// bring in setAlert
+import { setAlert } from '../../actions/alert'
+// bring in proptypes
+import PropTypes from 'prop-types'
 
-const Register = () => {
+const Register = ({ setAlert }) => {
   // the object full of values is formData, function to update state(formData) is setform data
   const [ formData, setFormData ] = useState({
     // default state values
@@ -20,9 +26,9 @@ const Register = () => {
   const onSubmit = e => {
     // prevent lock
     e.preventDefault()
-    // if password does not match password too, log error message
+    // if password does not match password too, log error message the alert is the class for the styling
     if (password !== password2) {
-      console.log('passwords do not match ')
+      setAlert('passwords do not match', 'danger')
       // if it does work, log the data in the state
     } else {
       console.log(formData)
@@ -84,5 +90,10 @@ const Register = () => {
     </Fragment>
   )
 }
+// proptype regis
+Register.propTypes = {
+  setAlert: PropTypes.func.isRequired
+}
 
-export default Register
+// export using connect the null is temporar and this lets us pass setAlert (actions we want to use from props) State, object with actions we want to use
+export default connect(null, { setAlert })(Register)
