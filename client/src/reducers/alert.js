@@ -5,7 +5,7 @@ import { SET_ALERT, REMOVE_ALERT } from '../actions/types'
 const initialState = []
 
 // export fucntion that takes in that that is initial state and an action
-export default function (state = initialState, action) {
+export default function something (state = initialState, action) {
   // destructure action
   const { type, payload } = action
   // evaluate actions based on their type
