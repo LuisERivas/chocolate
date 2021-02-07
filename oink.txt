@@ -128,11 +128,12 @@ This is a log of all Changes done
 17.09: in actions/alert.js create the time out for the alert. check to make sure the alert dissapears after 5 seconds. (Good to go)
 17.09: change setAlert to take in msg, alertType and also timeout length and replaced fixed time period for time out in settimeout dispatch to the new timeout variable, Tested to see if new variable works (Good to Go)
 
-17.00: 
-17.01: 
-17.02: 
-17.04: 
-17.05: 
+secondAttemptAtAuthReducerAndRegisterAction
+17.00: add register success and register fail to actions/types.js
+17.01: create auth.js in reducers... import register success and register fail from actions
+17.02: set upinitial state and set up export, create switch for how to handle the action type we hace in the state
+17.04: create src/actions/auth.js, set up imports, create export, add set alert action to imports 
+17.05: go to register.js from components/auth and import register from actions/auth add register to export at bottom add register to proptypes
 17.06: 
 17.07: 
 17.08:

@@ -18,7 +18,7 @@ const config = require('config')
 // @access:        Public
 
 // get api/users/ will send response of user route
-router.get('/', (req, res) => res.send('User Route'))
+// router.get('/', (req, res) => res.send('User Route'))
 
 // @Route:         Post api/users
 // @Description:   Register User
@@ -98,7 +98,7 @@ router.post('/',
           if (err) throw err
           // response with the token
           res.send({ token })
-          //console.log(token)
+          // console.log(token)
         }
       )
     } catch (err) {

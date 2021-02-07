@@ -14,7 +14,7 @@ connectDB()
 app.use(express.json({ extended: false }))
 
 /* Default to port 5000 */
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 3000
 
 /* Check to make sure API is running */
 app.get('/', (req, res) => res.send('API is Running'))

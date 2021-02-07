@@ -3,10 +3,11 @@ import React, { Fragment, useState } from 'react'
 import { connect } from 'react-redux'
 // bring in setAlert
 import { setAlert } from '../../actions/alert'
+import { register } from '../../actions/auth'
 // bring in proptypes
 import PropTypes from 'prop-types'
 
-const Register = ({ setAlert }) => {
+const Register = ({ setAlert, register }) => {
   // the object full of values is formData, function to update state(formData) is setform data
   const [ formData, setFormData ] = useState({
     // default state values
@@ -31,7 +32,7 @@ const Register = ({ setAlert }) => {
       setAlert('passwords do not match', 'danger')
       // if it does work, log the data in the state
     } else {
-      console.log(formData)
+      register({ name, email, password })
     }
   }
 
@@ -48,7 +49,7 @@ const Register = ({ setAlert }) => {
             name='name'
             value={name}
             onChange={e => onChange(e)}
-            required />
+          />
         </div>
         <div>
           <input
@@ -57,7 +58,7 @@ const Register = ({ setAlert }) => {
             name='email'
             value={email}
             onChange={e => onChange(e)}
-            required />
+          />
         </div>
         <div>
           <input
@@ -67,7 +68,7 @@ const Register = ({ setAlert }) => {
             minLength='6'
             value={password}
             onChange={e => onChange(e)}
-            required />
+          />
         </div>
         <div>
           <input
@@ -77,7 +78,7 @@ const Register = ({ setAlert }) => {
             minLength='6'
             value={password2}
             onChange={e => onChange(e)}
-            required />
+          />
         </div>
         <div>
           <input type='submit' value='Register' />
@@ -92,8 +93,9 @@ const Register = ({ setAlert }) => {
 }
 // proptype regis
 Register.propTypes = {
-  setAlert: PropTypes.func.isRequired
+  setAlert: PropTypes.func.isRequired,
+  register: PropTypes.func.isRequired
 }
 
 // export using connect the null is temporar and this lets us pass setAlert (actions we want to use from props) State, object with actions we want to use
-export default connect(null, { setAlert })(Register)
+export default connect(null, { setAlert, register })(Register)
