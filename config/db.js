@@ -24,6 +24,7 @@ const connectDB = async () => {
     // log the error
     console.error(err.message)
     // exit the process
+    console.log('something messed up dude')
     process.exit(1)
   }
 }

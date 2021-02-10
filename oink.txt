@@ -129,11 +129,29 @@ This is a log of all Changes done
 17.09: change setAlert to take in msg, alertType and also timeout length and replaced fixed time period for time out in settimeout dispatch to the new timeout variable, Tested to see if new variable works (Good to Go)
 
 secondAttemptAtAuthReducerAndRegisterAction
-17.00: add register success and register fail to actions/types.js
-17.01: create auth.js in reducers... import register success and register fail from actions
-17.02: set upinitial state and set up export, create switch for how to handle the action type we hace in the state
-17.04: create src/actions/auth.js, set up imports, create export, add set alert action to imports 
-17.05: go to register.js from components/auth and import register from actions/auth add register to export at bottom add register to proptypes
-17.06: 
-17.07: 
-17.08:
+18.00: add register success and register fail to actions/types.js
+18.01: create auth.js in reducers... import register success and register fail from actions
+18.02: set upinitial state and set up export, create switch for how to handle the action type we hace in the state
+18.04: create src/actions/auth.js, set up imports, create export, add set alert action to imports 
+18.05: go to register.js from components/auth and import register from actions/auth add register to export at bottom add register to proptypes
+18.06: Error when trying to trigger warnings for name, email, and password. fixed by changing the default server port from 5000 to 3000.
+
+loadUserAndSetAuthToken
+19.00: add userloaded and auth error to src/actions/types.js
+19.01: add userloaeded and uath error to src/actions/auth.js, create setauthtoken.js in src/utils
+19.02: import axios into setauthtoken, created set auth token function 
+19.04: in src/actions/auth.js creat load user function
+19.05: add userloaded and auth error to src/reducers/auth.js
+19.06: add check for local storage token to app.js and add loadUser, add usereffect and useeffect function
+19.07: 
+19.08:
+
+loadUserAndSetAuthToken
+19.00: 
+19.01: 
+19.02: 
+19.04: 
+19.05: 
+19.06: 
+19.07: 
+19.08:
