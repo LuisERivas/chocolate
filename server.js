@@ -14,7 +14,7 @@ connectDB()
 app.use(express.json({ extended: false }))
 
 /* Default to port 5000 */
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 5000
 
 /* Check to make sure API is running */
 app.get('/', (req, res) => res.send('API is Running'))
@@ -31,3 +31,4 @@ app.use('/api/auth', require('./routes/api/auth'))
 
 /* Listen for Server starting and output the port it started on */
 app.listen(PORT, () => console.log(`server started on port ${PORT}`))
+// console.log(process.env)
