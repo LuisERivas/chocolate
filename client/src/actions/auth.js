@@ -41,7 +41,7 @@
 import axios from 'axios'
 import setAuthToken from '../utils/setAuthToken'
 import { setAlert } from './alert'
-import { REGISTER_SUCCESS, REGISTER_FAIL, USER_LOADED, AUTH_ERROR } from './types'
+import { REGISTER_SUCCESS, REGISTER_FAIL, USER_LOADED, AUTH_ERROR, LOGIN_FAIL, LOGIN_SUCCESS } from './types'
 
 // Load user
 export const loadUser = () => async dispatch => {
@@ -49,11 +49,14 @@ export const loadUser = () => async dispatch => {
     setAuthToken(localStorage.token)
   }
   try {
-    const res = await axios.get(process.env.PORT || 'http://localhost:5000' + '/api/auth')
+    const res = await axios.get(process.env.PORT || 'http://localhost:5000/api/auth')
     dispatch({
       type: USER_LOADED,
       payload: res.data
     })
+    dispatch(
+      loadUser()
+    )
   } catch (err) {
     dispatch({
       type: AUTH_ERROR
@@ -71,9 +74,39 @@ export const register = ({ name, email, password }) => async dispatch => {
   try {
     // const proxyUrl = 'https://infinite-castle-58852.herokuapp.com/'
     // will set to whatever port is being used by host
-    const res = await axios.post(process.env.PORT || 'http://localhost:5000' + '/api/users', body, config)
+    const res = await axios.post(process.env.PORT || 'http://localhost:5000/api/users', body, config)
     dispatch({
       type: REGISTER_SUCCESS,
+      payload: res.data
+    })
+    dispatch(
+      loadUser()
+    )
+  } catch (err) {
+    const errors = err.response.data.errors
+    if (errors) {
+      errors.forEach(error => dispatch(setAlert(error.msg, 'danger')))
+    }
+    dispatch({
+      type: REGISTER_FAIL
+    })
+  }
+}
+
+// Login user
+
+export const login = (email, password) => async dispatch => {
+  const config = {
+    headers: { 'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'application/json' }
+  }
+  const body = JSON.stringify({ email, password })
+  try {
+    // const proxyUrl = 'https://infinite-castle-58852.herokuapp.com/'
+    // will set to whatever port is being used by host
+    const res = await axios.post(process.env.PORT || 'http://localhost:5000/api/auth', body, config)
+    dispatch({
+      type: LOGIN_SUCCESS,
       payload: res.data
     })
   } catch (err) {
@@ -82,7 +115,7 @@ export const register = ({ name, email, password }) => async dispatch => {
       errors.forEach(error => dispatch(setAlert(error.msg, 'danger')))
     }
     dispatch({
-      type: REGISTER_FAIL
+      type: LOGIN_FAIL
     })
   }
 }

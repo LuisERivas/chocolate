@@ -143,15 +143,35 @@ loadUserAndSetAuthToken
 19.04: in src/actions/auth.js creat load user function
 19.05: add userloaded and auth error to src/reducers/auth.js
 19.06: add check for local storage token to app.js and add loadUser, add usereffect and useeffect function
-19.07: 
-19.08:
+19.07: CHeck to see if user is loaded after creating their account (Good to go)
+19.08: Fixed error with requests being made to wrong local host, had to get extension for chrom (Good to go)
 
-loadUserAndSetAuthToken
-19.00: 
-19.01: 
-19.02: 
-19.04: 
-19.05: 
-19.06: 
-19.07: 
-19.08:
+User Login
+20.00: added login user action to src/actions/auth.js
+20.01: add login success and login fail to src/actions/types.js
+20.02: in reducers/auth.js bring in login success and loginfail and added to switch
+20.04: in componnents/auth/Login.js bring in proptypes and connect and login
+20.05: add connect to the export add proptypes at the bottom
+20.06: add login to login function, check if entering good email and bad password bring up alert (good to go after fixing error on api/auth.js
+20.07: added redirect to dashboard when logged in and redirect after registering tested (good to go)
+20.08: getting weird situation where it keeps saying user loaded over and over, not sure why but it doesnt affect anything so just going to move on
+
+User Login
+21.00: 
+21.01: 
+21.02: 
+21.04: 
+21.05: 
+21.06: 
+21.07: 
+21.08:
+
+User Login
+22.00: 
+22.01: 
+22.02: 
+22.04: 
+22.05: 
+22.06: 
+22.07: 
+22.08:

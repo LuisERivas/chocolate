@@ -6,8 +6,9 @@ import { setAlert } from '../../actions/alert'
 import { register } from '../../actions/auth'
 // bring in proptypes
 import PropTypes from 'prop-types'
+import { Redirect } from 'react-router-dom'
 
-const Register = ({ setAlert, register }) => {
+const Register = ({ setAlert, register, isAuthenticated }) => {
   // the object full of values is formData, function to update state(formData) is setform data
   const [ formData, setFormData ] = useState({
     // default state values
@@ -34,6 +35,10 @@ const Register = ({ setAlert, register }) => {
     } else {
       register({ name, email, password })
     }
+  }
+
+  if (isAuthenticated) {
+    return <Redirect to='/dashboard' />
   }
 
   // adding value={variable} asociates the variable with the current state, the on change causes the state to be updated
@@ -94,8 +99,12 @@ const Register = ({ setAlert, register }) => {
 // proptype regis
 Register.propTypes = {
   setAlert: PropTypes.func.isRequired,
-  register: PropTypes.func.isRequired
+  register: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool
 }
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+})
 
 // export using connect the null is temporar and this lets us pass setAlert (actions we want to use from props) State, object with actions we want to use
-export default connect(null, { setAlert, register })(Register)
+export default connect(mapStateToProps, { setAlert, register })(Register)
