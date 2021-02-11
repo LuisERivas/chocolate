@@ -1,6 +1,10 @@
 import React, { Fragment, useState } from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import { login } from '../../actions/auth'
+import { Redirect } from 'react-router-dom'
 
-const Login = () => {
+const Login = ({ login, isAuthenticated }) => {
   // the object full of values is formData, function to update state(formData) is setform data
   const [ formData, setFormData ] = useState({
     // default state values
@@ -19,6 +23,12 @@ const Login = () => {
     // prevent lock
     e.preventDefault()
     console.log(formData)
+    login(email, password)
+  }
+
+  // redirect if logged in
+  if (isAuthenticated) {
+    return <Redirect to='/dashboard' />
   }
 
   return (
@@ -56,4 +66,13 @@ const Login = () => {
     </Fragment>
   )
 }
-export default Login
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+})
+
+login.PropTypes = {
+  login: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool
+}
+
+export default connect(mapStateToProps, { login })(Login)

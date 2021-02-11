@@ -71,7 +71,7 @@ router.post(
       // if user is not found
       if (!user) {
         // send error status and show invalid crednetials
-        return res.status(400).json({ errors: [{ msg: 'Invalid Credentials' }] })
+        return res.status(400).json({ errors: [{ msg: 'Invalid Credentialsss' }] })
       }
 
       // check that password matches to the user by comparing the plain text password to the encrypted password
