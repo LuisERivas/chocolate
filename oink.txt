@@ -163,15 +163,15 @@ logoutandnavbarlinks
 21.04: modify export to add connect in navbar component (add map state to props and logout action)
 21.05: add map state to props, and add navbar proptypes, add auth destructured and logout action to dependencies for navibar
 21.06: add guest links and auth links, edited original return to show different content based on what is loaded and if it is authenticated
-21.07: 
+21.07: keep getting error that Proptypes is misspselled, not sure how to fix, will consult later
 21.08:
 
-User Login
-22.00: 
-22.01: 
-22.02: 
-22.04: 
-22.05: 
+protectedRouteForDashboard
+22.00: create components/dashboard/Dashboard.js import react and proptypes, create Dashboard Function, dashboard protoyptes, and export dashboard
+22.01: import dashboard into app.js and add to route switcher
+22.02: test by loggin in on the app (displays dashboard component once logged in GOOD TO GO)
+22.04: create components/routing/PrivateRoute.JS
+22.05: go to app.js and add privateroute to the dashboard route (test by loggng out and tyring to get into dashboard. should automatically switch to login page GOOD TO GO)
 22.06: 
 22.07: 
 22.08:
