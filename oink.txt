@@ -156,13 +156,13 @@ User Login
 20.07: added redirect to dashboard when logged in and redirect after registering tested (good to go)
 20.08: getting weird situation where it keeps saying user loaded over and over, not sure why but it doesnt affect anything so just going to move on
 
-User Login
-21.00: 
-21.01: 
-21.02: 
-21.04: 
-21.05: 
-21.06: 
+logoutandnavbarlinks
+21.00: add logout to actions/types.js and bring logout action to actions/auth.js
+21.01: add logout to reducer cases and bring in logout at top
+21.02: in navbar componenet bring in  connect from react-redux and bring proptypes and brin gin logout action
+21.04: modify export to add connect in navbar component (add map state to props and logout action)
+21.05: add map state to props, and add navbar proptypes, add auth destructured and logout action to dependencies for navibar
+21.06: add guest links and auth links, edited original return to show different content based on what is loaded and if it is authenticated
 21.07: 
 21.08:
 
