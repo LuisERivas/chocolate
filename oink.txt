@@ -164,7 +164,6 @@ logoutandnavbarlinks
 21.05: add map state to props, and add navbar proptypes, add auth destructured and logout action to dependencies for navibar
 21.06: add guest links and auth links, edited original return to show different content based on what is loaded and if it is authenticated
 21.07: keep getting error that Proptypes is misspselled, not sure how to fix, will consult later
-21.08:
 
 protectedRouteForDashboard
 22.00: create components/dashboard/Dashboard.js import react and proptypes, create Dashboard Function, dashboard protoyptes, and export dashboard
@@ -173,12 +172,22 @@ protectedRouteForDashboard
 22.04: create components/routing/PrivateRoute.JS
 22.05: go to app.js and add privateroute to the dashboard route (test by loggng out and tyring to get into dashboard. should automatically switch to login page GOOD TO GO)
 
-
+creatingProfileModel
 23.00: create file Profile.js in Models
 23.01: bring in mongoose, create profile schema and add export
-23.02: 
-23.04: 
-23.05: 
-23.06: 
-23.07: 
-23.08:
+
+getCurrentUserProfile
+24.00: create routes/api/profile.js, bring in express, bring in router, set up initial get, set up export
+24.01: bring in auth and modify get request to be async bring in profile, and bring in user model
+24.02: Check /api/profile/me works in postman add header of x-auth-token and token
+24.04: did not work at first, i had to add app.use with file path for the profile routes to the server.js file (Good to GO)
+
+
+25.00: 
+25.01: 
+25.02: 
+25.04: 
+25.05: 
+25.06: 
+25.07: 
+25.08:
