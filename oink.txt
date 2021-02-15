@@ -182,11 +182,11 @@ getCurrentUserProfile
 24.02: Check /api/profile/me works in postman add header of x-auth-token and token
 24.04: did not work at first, i had to add app.use with file path for the profile routes to the server.js file (Good to GO)
 
-
-25.00: 
-25.01: 
-25.02: 
-25.04: 
+create and update profile routes
+25.00: bring in check, and validation from expresss-validator set up post request update a profile.
+25.01: check to see if post request works on postman. cust content type of applicaiton/json, key of x-auth-token, and use token to test (sends error code if platofm is missing ) Good to go
+25.02: added pulling expedrience, trading style, and platform from the req.body and pushing those into profileFields. test to see if response is made when sending post request (GOOD TO GO) 
+25.04: added profile updating, and profile create if it does not currently exist test on postman and check to see if it is added on atlas (GOOD TO GO)
 25.05: 
 25.06: 
 25.07: 

@@ -15,7 +15,8 @@ const ProfileSchema = new mongoose.Schema({
     type: String
   },
   platform: {
-    type: String
+    type: String,
+    requredL: true
   },
   date: {
     type: Date,
