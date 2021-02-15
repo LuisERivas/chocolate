@@ -4,6 +4,8 @@ const auth = require('../../middleware/auth')
 const Profile = require('../../models/Profile')
 const User = require('../../models/Users')
 
+const { check, validationResult } = require('express-validator')
+
 // Get api/profile/me
 // test get current user profile
 // private access
@@ -25,5 +27,57 @@ router.get('/me', auth, async (req, res) => {
     res.status(500).send('server Error')
   }
 })
+
+// post api/profile
+// create or update user profile
+// private access
+router.post('/', [ auth, [
+  check('platform', 'Platform is required').not().isEmpty()
+]], async (req, res) => {
+  const errors = validationResult(req)
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() })
+  }
+  // pulling these out of req.body
+  const {
+    experience,
+    tradingStyle,
+    platform
+  } = req.body
+  // build profile object
+  const profileFields = {}
+  profileFields.user = req.user.id
+  if (experience) profileFields.experience = experience
+  if (tradingStyle) profileFields.tradingStyle = tradingStyle
+  if (platform) profileFields.platform = platform
+  // res.send('oinkers')
+
+  try {
+    // set profile to the profile we find in the token
+    let profile = await Profile.findOne({ user: req.user.id })
+    // if there is a profile
+    if (profile) {
+      // find the profile by id and update it
+      profile = await Profile.findOneAndUpdate(
+        // set the profile fields
+        { user: req.user.id },
+        { $set: profileFields },
+        { new: true }
+      )
+      // log out the profile
+      return res.json(profile)
+    }
+    // create if no profile is there
+    profile = new Profile(profileFields)
+    // save the profile
+    await profile.save()
+    // logout the proifle
+    res.json(profile)
+  } catch (err) {
+    console.error(err.message)
+    res.status(500).send('Sever Error')
+  }
+}
+)
 
 module.exports = router
