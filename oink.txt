@@ -191,3 +191,23 @@ create and update profile routes
 25.06: 
 25.07: 
 25.08:
+
+Get all Profile and by user id
+26.00: create get request, test in postman should pull up all created profiles with the information of the user that profile pertains to
+26.01: create get request for user/:userid test on postman GOOD TO GO
+26.02: 
+26.04: 
+26.05: 
+26.06: 
+26.07: 
+26.08:
+
+Get all Profile and by user id
+27.00: 
+27.01: 
+27.02: 
+27.04: 
+27.05: 
+27.06: 
+27.07: 
+27.08:
