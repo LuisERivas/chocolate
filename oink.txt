@@ -202,8 +202,8 @@ Get all Profile and by user id
 26.07: 
 26.08:
 
-Get all Profile and by user id
-27.00: 
+Delete Profile and User
+27.00: Created delete route test by creating a new user and profile, then deleting it GOOD TO GO
 27.01: 
 27.02: 
 27.04: 
