@@ -45,18 +45,22 @@ import { REGISTER_SUCCESS, REGISTER_FAIL, USER_LOADED, AUTH_ERROR, LOGIN_FAIL, L
 
 // Load user
 export const loadUser = () => async dispatch => {
+  // debugger
+  console.log(localStorage.token)
   if (localStorage.token) {
     setAuthToken(localStorage.token)
+    console.log('log to see if this the problem')
   }
   try {
     const res = await axios.get(process.env.PORT || 'http://localhost:5000/api/auth')
+    console.log('test')
     dispatch({
       type: USER_LOADED,
       payload: res.data
     })
-    dispatch(
-      loadUser()
-    )
+    // dispatch(
+    //   loadUser()
+    // )
   } catch (err) {
     dispatch({
       type: AUTH_ERROR

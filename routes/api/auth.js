@@ -114,7 +114,7 @@ router.post(
       res.status(500).send('server error')
     }
 
-    console.log('something was posted')
+    console.log('something was Happend')
   })
 
 // export route to be used in other parts of the program

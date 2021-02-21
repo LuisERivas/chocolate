@@ -11,7 +11,7 @@ module.exports = function (req, res, next) {
 
   // check if token is present
   // if token is not present
-  // USED FOR TESTING PURPOSES: console.log(token)
+  // console.log('This is in auth middleware:' + token)
   if (!token) {
     // send status of not authorized and message of denial
     return res.status(401).json({ msg: 'No token, authorization denied' })

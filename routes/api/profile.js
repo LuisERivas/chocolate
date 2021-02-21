@@ -13,6 +13,7 @@ const { check, validationResult } = require('express-validator')
 router.get('/me', auth, async (req, res) => {
   try {
     // find user by id and populate name with name that comes from the user model
+    // console.log('i am a test')
     const profile = await Profile.findOne({ user: req.user.id }).populate(
       'user',
       ['name'])

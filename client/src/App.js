@@ -21,6 +21,7 @@ import store from './store'
 import Alert from './components/layout/Alert'
 import setAuthToken from './utils/setAuthToken'
 import { loadUser } from './actions/auth'
+// import { getCurrentProfile } from './actions/profile'
 
 if (localStorage.token) {
   setAuthToken(localStorage.token)
@@ -30,24 +31,21 @@ const App = () => {
   useEffect(() => {
     store.dispatch(loadUser())
   }, [])
-  return (
-  // provider uses store
-    <Provider store={store}>
-      <Router>
-        <Fragment>
-          <Navibar />
-          <Route exact path='/' component={Landing} />
-          <section className='container'>
-            <Alert />
-            <Switch>
-              <Route exact path='/register' component={Register} />
-              <Route exact path='/login' component={Login} />
-              <PrivateRoute exact path='/dashboard' component={Dashboard} />
-            </Switch>
-          </section>
-        </Fragment>
-      </Router>
-    </Provider>
-  )
+  return <Provider store={store}>
+    <Router>
+      <Fragment>
+        <Navibar />
+        <Route exact path='/' component={Landing} />
+        <section className='container'>
+          <Alert />
+          <Switch>
+            <Route exact path='/register' component={Register} />
+            <Route exact path='/login' component={Login} />
+            <PrivateRoute exact path='/dashboard' component={Dashboard} />
+          </Switch>
+        </section>
+      </Fragment>
+    </Router>
+  </Provider>
 }
 export default App
