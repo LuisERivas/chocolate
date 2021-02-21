@@ -211,3 +211,25 @@ Delete Profile and User
 27.06: 
 27.07: 
 27.08:
+
+Profile reducer and get current profile 
+28.00: in reducers create profile.js
+28.01: in reducers/index.js add profile fropm profile
+28.02: in reducers/profile create intital state, set up export
+28.04: add get profile and profile error  to src/actions/types
+28.05: create actions/profile.js, bring in axios and set alert, and types, create get current users profile funciton
+28.06: call get current profile in dashboard comop
+28.07: fixed error by making sure that auth requests were taking place before the me requests. tested, Good TO GO
+28.08:
+
+oink
+29.00: 
+29.01: 
+29.02: 
+29.04: 
+29.05: 
+29.06: 
+29.07: 
+29.08:
+
+firebase for authentication 

@@ -32,7 +32,7 @@ const Navibar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   )
 }
-Navbar.PropTypes = {
+Navibar.propTypes = {
   logout: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired
 }
