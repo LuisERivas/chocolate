@@ -227,19 +227,23 @@ Add to profile
 29.01: adding put request to add stonks to profile
 29.02: test in postman by making a put request to api/profile/stonks with a content type of application json and the token of the user
 29.04: had an error, had to fix by adding stonks to profile and adjusting put request tested and GOOD TO GO
-29.05: 
-29.06: 
-29.07: 
-29.08:
 
 Delete stonks
 30.00: created delete route to get rid of a stonk by its id number
 30.01: Test on postman to see it deletes while using token to pull user id and using the id of the stonk path /stonks/ (id)
-30.02: 
-30.04: 
-30.05: 
-30.06: 
-30.07: 
-30.08:
+30.02: had an error that .map could not read undefined, fixed by changing capitalization for profile on same line as map. GOOD TO GO
 
+userNameOnDash
+31.00: in navbar.js added link to dashboard CHeck to see if it works GOOD TO GO
+31.01: make landing page unavailable if logged in, bring in connect from react-redux, and bring in proptypes, add connect to bottom with mapstateto props. create mapstate to props to set up state to know we are authenticated
+31.02: add is authenticated to landing function dependencies. add if statment to redirect to dashboard, if they are authenticated and click the landing page link. import redirect from react-router-dom
+31.04: test to see if it works GOOD TO GO. if user is null, show message component
+31.05: create userLoadMessage.js in Layout set up import of Fragment from react, set up export default.
+31.06: bring userloadmessage into dashboard. set up conditional so that it displays the message only if user is null, test by hitting refresh and it should temporarily show the loading message
+31.07: add user name to dashboard fragment by pulling user name from user.name and destructring the token from Auth, test to see if the welcome message changes based on who is logged in by loggin out and trying a different user GOOD TO GO
+31.08: add functionality that will let user know if they have a profile or not once they log in, tested GOOD TO GO
+31.09: add clear profile to actions/types, add clear profile to auth actions when loggin out, add clear profile to profile reducer test to see if clearprofile runs in redux when clicking logout button (GOOD TO GO)
+31.10: add button and message prompting user to choose stonks if they do not have any stonks in their profile, test to make sure message does not come up if user currently has stonks saved on list. (GOOD TO GO)
+
+ 
 firebase for authentication 
