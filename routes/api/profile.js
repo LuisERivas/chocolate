@@ -175,4 +175,22 @@ async (req, res) => {
   }
 })
 
+// Delete api/profile/stonks/:stonk_id
+// delete stonk from list
+// Private access
+router.delete('/stonks/:stonk_id', auth, async (req, res) => {
+  try {
+    const profile = await Profile.findOne({ user: req.user.id })
+    // get remove index
+    const removeIndex = profile.stonks.map(item => item.id).indexOf(req.params.stonk_id)
+    profile.stonks.splice(removeIndex, 1)
+    // show changed profile
+    await profile.save()
+    res.json(profile)
+  } catch (err) {
+    console.error(err.message)
+    res.status(500).send('error trying to delete stonks')
+  }
+})
+
 module.exports = router
