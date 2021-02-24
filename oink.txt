@@ -222,11 +222,11 @@ Profile reducer and get current profile
 28.07: fixed error by making sure that auth requests were taking place before the me requests. tested, Good TO GO
 28.08:
 
-oink
-29.00: 
-29.01: 
-29.02: 
-29.04: 
+Add to profile
+29.00: added stonks to profile model
+29.01: adding put request to add stonks to profile
+29.02: test in postman by making a put request to api/profile/stonks with a content type of application json and the token of the user
+29.04: had an error, had to fix by adding stonks to profile and adjusting put request tested and GOOD TO GO
 29.05: 
 29.06: 
 29.07: 
