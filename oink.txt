@@ -232,4 +232,14 @@ Add to profile
 29.07: 
 29.08:
 
+Delete stonks
+30.00: created delete route to get rid of a stonk by its id number
+30.01: Test on postman to see it deletes while using token to pull user id and using the id of the stonk path /stonks/ (id)
+30.02: 
+30.04: 
+30.05: 
+30.06: 
+30.07: 
+30.08:
+
 firebase for authentication 
