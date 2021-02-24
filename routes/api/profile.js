@@ -43,7 +43,9 @@ router.post('/', [ auth, [
   const {
     experience,
     tradingStyle,
-    platform
+    platform,
+    nameOfStonk,
+    ticker
   } = req.body
   // build profile object
   const profileFields = {}
@@ -52,9 +54,14 @@ router.post('/', [ auth, [
   if (tradingStyle) profileFields.tradingStyle = tradingStyle
   if (platform) profileFields.platform = platform
   // res.send('oinkers')
+  // stonks information
+  profileFields.stonks = {}
+  if (nameOfStonk) profileFields.stonks.nameOfStonk = nameOfStonk
+  if (ticker) profileFields.stonks.ticker = ticker
 
   try {
     // set profile to the profile we find in the token
+    console.log('trying to see if nameOfStonk Works' + nameOfStonk)
     let profile = await Profile.findOne({ user: req.user.id })
     // if there is a profile
     if (profile) {
@@ -129,10 +136,42 @@ router.delete('/', auth, async (req, res) => {
     await Profile.findOneAndRemove({ user: req.user.id })
     await User.findOneAndRemove({ _id: req.user.id })
 
-    res.json({msg: 'user deleted!'})
+    res.json({ msg: 'user deleted!' })
   } catch (err) {
     console.error(err.message)
     res.status(500).send('Server Error')
+  }
+})
+
+// put api/profile/stonks
+// add to stonk list
+// Private access
+router.put('/stonks', [auth, [
+  check('ticker', 'Ticker is required').not().isEmpty()
+]
+],
+async (req, res) => {
+  const errors = validationResult(req)
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() })
+  }
+  const {
+    ticker,
+    nameOfStonk
+  } = req.body
+
+  const newStonk = {
+    ticker,
+    nameOfStonk
+  }
+  try {
+    const profile = await Profile.findOne({ user: req.user.id })
+    profile.stonks.unshift(newStonk)
+    await profile.save()
+    res.json(profile)
+  } catch (err) {
+    console.error(err.message)
+    res.status(500).send('error adding stonks')
   }
 })
 

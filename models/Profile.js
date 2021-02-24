@@ -16,8 +16,18 @@ const ProfileSchema = new mongoose.Schema({
   },
   platform: {
     type: String,
-    requredL: true
+    required: true
   },
+  stonks: [
+    {
+      nameOfStonk: {
+        type: String
+      },
+      ticker: {
+        type: String
+      }
+    }
+  ],
   date: {
     type: Date,
     default: Date.now
