@@ -10,6 +10,7 @@ const Navibar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <Navbar.Collapse id='basic-navbar-nav'>
       <Nav className='mr-auto'>
         <Nav.Link onClick={logout} href='#!'>logout</Nav.Link>
+        <Nav.Link href='/dashboard'>Dashboard</Nav.Link>
       </Nav>
     </Navbar.Collapse>
   )
