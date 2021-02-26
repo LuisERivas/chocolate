@@ -245,5 +245,16 @@ userNameOnDash
 31.09: add clear profile to actions/types, add clear profile to auth actions when loggin out, add clear profile to profile reducer test to see if clearprofile runs in redux when clicking logout button (GOOD TO GO)
 31.10: add button and message prompting user to choose stonks if they do not have any stonks in their profile, test to make sure message does not come up if user currently has stonks saved on list. (GOOD TO GO)
 
+ChooseStonksComponent
+32.00: create components/profile-forms/PickStonks.js
+32.01: set up imports, function, proptypes, and export. import connect, bring in use state hook
+32.02: add pickstonks.js to app.js by importing it and adding private route component to switch
+32.04: was unable to get text to render in the form.control, fixed by chaning intial state of nameofstonk and ticker to null
+32.05: 
+32.06: 
+32.07: 
+32.08: 
+32.09: 
+32.10: 
  
 firebase for authentication 
